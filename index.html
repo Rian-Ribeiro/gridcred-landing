@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GridCred — Sistema de gestão de créditos de energia de geração distribuída. Automatize importações, cobranças e pagamentos da sua empresa de GD.">
+  <title>GridCred — Gestão de Créditos GD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     MOBILE MENU
+     ══════════════════════════════════════════════ -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-panel">
+    <button class="mobile-close" id="mobile-close"><i class="bi bi-x-lg"></i></button>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#financeiro">Financeiro</a>
+    <a href="#planos">Planos</a>
+    <a href="#contato" class="btn btn-primary">Falar com Especialista</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     NAVBAR
+     ══════════════════════════════════════════════ -->
+<header class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">
+        <div class="logo-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+        GridCred
+      </a>
+
+      <ul class="navbar-links">
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#financeiro">Financeiro</a></li>
+        <li><a href="#planos">Planos</a></li>
+      </ul>
+
+      <div class="navbar-cta">
+        <a href="#contato" class="btn btn-outline-dark btn-sm">Falar com especialista</a>
+        <a href="#planos" class="btn btn-primary btn-sm">Ver planos</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Left: copy -->
+      <div>
+        <div class="hero-badge fade-in">
+          <span class="badge badge-green">
+            <i class="bi bi-lightning-charge-fill"></i>
+            Geração Distribuída · Cemig
+          </span>
+        </div>
+
+        <h1 class="hero-title fade-in fade-in-delay-1">
+          Gerencie seus créditos de GD
+          <span class="highlight"> sem planilha,<br>sem erro.</span>
+        </h1>
+
+        <p class="hero-desc fade-in fade-in-delay-2">
+          O GridCred automatiza tudo — da importação dos arquivos da Cemig às cobranças dos clientes e pagamentos aos investidores — em uma plataforma única para gestoras de GD.
+        </p>
+
+        <div class="hero-actions fade-in fade-in-delay-3">
+          <a href="#contato" class="btn btn-primary btn-lg">
+            <i class="bi bi-calendar-check"></i>
+            Agendar demonstração
+          </a>
+          <a href="#como-funciona" class="btn btn-outline btn-lg">
+            Ver como funciona <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="hero-stats fade-in fade-in-delay-4">
+          <div>
+            <div class="hero-stat-num" data-target="100" data-suffix="%">0%</div>
+            <div class="hero-stat-label">Automação de importação</div>
+          </div>
+          <div>
+            <div class="hero-stat-num" data-target="0" data-suffix=" erros">0 erros</div>
+            <div class="hero-stat-label">No cálculo de cobranças</div>
+          </div>
+          <div>
+            <div class="hero-stat-num" data-target="5" data-suffix="x">0x</div>
+            <div class="hero-stat-label">Mais rápido que planilhas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: mockup -->
+      <div class="hero-visual fade-in fade-in-delay-2">
+        <div class="dashboard-mockup">
+          <div class="mockup-bar">
+            <div class="mockup-dot red"></div>
+            <div class="mockup-dot yellow"></div>
+            <div class="mockup-dot green"></div>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-kpis">
+              <div class="mockup-kpi">
+                <div class="mockup-kpi-label">A Receber</div>
+                <div class="mockup-kpi-value green">R$ 28,4k</div>
+              </div>
+              <div class="mockup-kpi">
+                <div class="mockup-kpi-label">A Pagar</div>
+                <div class="mockup-kpi-value yellow">R$ 12,1k</div>
+              </div>
+              <div class="mockup-kpi">
+                <div class="mockup-kpi-label">Saldo</div>
+                <div class="mockup-kpi-value">R$ 16,3k</div>
+              </div>
+            </div>
+            <div class="mockup-chart">
+              <div class="mockup-chart-label">Créditos transferidos · últimos 12 meses</div>
+              <div class="mockup-bars">
+                <div class="mockup-bar-item"></div>
+                <div class="mockup-bar-item"></div>
+                <div class="mockup-bar-item accent"></div>
+                <div class="mockup-bar-item"></div>
+                <div class="mockup-bar-item accent"></div>
+                <div class="mockup-bar-item"></div>
+                <div class="mockup-bar-item"></div>
+                <div class="mockup-bar-item accent"></div>
+                <div class="mockup-bar-item"></div>
+                <div class="mockup-bar-item accent"></div>
+                <div class="mockup-bar-item"></div>
+                <div class="mockup-bar-item accent"></div>
+              </div>
+            </div>
+            <div class="mockup-rows">
+              <div class="mockup-row">
+                <div class="mockup-row-dot" style="background:#4ade80"></div>
+                <div class="mockup-row-text" style="width:45%"></div>
+                <div class="mockup-row-val" style="color:#4ade80">Pago</div>
+              </div>
+              <div class="mockup-row">
+                <div class="mockup-row-dot" style="background:#fbbf24"></div>
+                <div class="mockup-row-text" style="width:60%"></div>
+                <div class="mockup-row-val" style="color:#fbbf24">Pendente</div>
+              </div>
+              <div class="mockup-row">
+                <div class="mockup-row-dot" style="background:#4ade80"></div>
+                <div class="mockup-row-text" style="width:38%"></div>
+                <div class="mockup-row-val" style="color:#4ade80">Pago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-float-badge">
+          <div class="float-icon"><i class="bi bi-cloud-upload"></i></div>
+          <div>
+            <div style="font-size:.7rem;color:#64748b;font-weight:500">Importação Cemig</div>
+            XML e XLSX detectados ✓
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     TRUSTED BY
+     ══════════════════════════════════════════════ -->
+<div class="trusted">
+  <div class="container">
+    <div class="trusted-inner">
+      <span class="trusted-label">Compatível com</span>
+      <div class="trusted-logos">
+        <span class="trusted-logo"><i class="bi bi-file-earmark-spreadsheet"></i> XLSX Cemig</span>
+        <span class="trusted-logo"><i class="bi bi-file-earmark-code"></i> XML Cemig</span>
+        <span class="trusted-logo"><i class="bi bi-sun"></i> Geração Distribuída</span>
+        <span class="trusted-logo"><i class="bi bi-lightning-charge"></i> Energia Elétrica</span>
+        <span class="trusted-logo"><i class="bi bi-shield-check"></i> LGPD</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     PROBLEMA
+     ══════════════════════════════════════════════ -->
+<section class="section pain-section">
+  <div class="container">
+    <div class="pain-grid">
+
+      <div class="pain-side fade-in">
+        <span class="badge badge-green mb-3"><i class="bi bi-exclamation-circle"></i> O Problema</span>
+        <h2>Gerenciar GD manualmente é caótico</h2>
+        <p>À medida que a carteira cresce, planilhas travam, erros se acumulam e horas são perdidas em conciliações manuais todo mês.</p>
+        <div class="solution-pill">
+          <i class="bi bi-arrow-right-circle-fill"></i>
+          GridCred resolve isso do início ao fim
+        </div>
+      </div>
+
+      <div class="pain-list">
+        <div class="pain-item fade-in">
+          <div class="pain-icon"><i class="bi bi-file-earmark-excel"></i></div>
+          <div class="pain-content">
+            <h4>Planilhas propensas a erro</h4>
+            <p>Copiar dados do relatório Cemig para planilhas mês a mês gera inconsistências e retrabalho constante.</p>
+          </div>
+        </div>
+        <div class="pain-item fade-in fade-in-delay-1">
+          <div class="pain-icon"><i class="bi bi-clock-history"></i></div>
+          <div class="pain-content">
+            <h4>Horas perdidas no fechamento</h4>
+            <p>Calcular manualmente os créditos de cada UC, gerar cobranças e controlar pagamentos consome dias inteiros.</p>
+          </div>
+        </div>
+        <div class="pain-item fade-in fade-in-delay-2">
+          <div class="pain-icon"><i class="bi bi-graph-down-arrow"></i></div>
+          <div class="pain-content">
+            <h4>Falta de visibilidade financeira</h4>
+            <p>Sem um painel financeiro, fica impossível saber exatamente o que você tem a receber, a pagar e o saldo real.</p>
+          </div>
+        </div>
+        <div class="pain-item fade-in fade-in-delay-3">
+          <div class="pain-icon"><i class="bi bi-people"></i></div>
+          <div class="pain-content">
+            <h4>Difícil de escalar</h4>
+            <p>Com 20 clientes é trabalhoso. Com 100 clientes, é impossível sem um sistema dedicado.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     FUNCIONALIDADES
+     ══════════════════════════════════════════════ -->
+<section class="section features-section" id="funcionalidades">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="badge badge-green mb-3"><i class="bi bi-grid-3x3-gap"></i> Funcionalidades</span>
+      <h2>Tudo que sua gestora de GD precisa</h2>
+      <p>Do arquivo bruto da Cemig ao relatório financeiro — em um único sistema.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="bi bi-cloud-upload"></i></div>
+        <h3>Importação Automática Cemig</h3>
+        <p>Faça upload dos arquivos XLSX ou XML da Cemig e o sistema identifica automaticamente as UCs, os períodos e os créditos transferidos. Sem digitação manual.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-1">
+        <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
+        <h3>Gestão de Clientes e Investidores</h3>
+        <p>Cadastre clientes que recebem créditos de GD e investidores que são donos das usinas — com perfis, contratos e dados separados para cada tipo.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-2">
+        <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+        <h3>Controle de Usinas (Plantas GD)</h3>
+        <p>Gerencie cada planta geradora: código, número de instalação, tarifa B1, investidor vinculado e histórico de geração mensal.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-3">
+        <div class="feature-icon"><i class="bi bi-house-door-fill"></i></div>
+        <h3>Unidades Consumidoras (UCs)</h3>
+        <p>Controle cada UC de cliente: desconto negociado por kWh, cota mensal, titular da conta de energia e vínculo com a usina de origem.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-4">
+        <div class="feature-icon"><i class="bi bi-receipt-cutoff"></i></div>
+        <h3>Cobranças Automáticas</h3>
+        <p>Gere cobranças mensais com um clique — o sistema calcula automaticamente o kWh real transferido × a tarifa negociada. Exportação para PDF ou envio por e-mail.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-5">
+        <div class="feature-icon"><i class="bi bi-cash-coin"></i></div>
+        <h3>Pagamentos a Investidores</h3>
+        <p>Calcule com precisão o que cada investidor deve receber, já com as deduções de fio-B, comercialização, contribuição mínima e PIS/COFINS aplicadas.</p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="bi bi-bar-chart-line-fill"></i></div>
+        <h3>Dashboard Financeiro</h3>
+        <p>Painel em tempo real com valores a receber, recebidos, a pagar e saldo pendente. Fluxo de caixa mensal com entradas e saídas consolidadas.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-1">
+        <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+        <h3>Controle de Acesso por Perfil</h3>
+        <p>Defina níveis de acesso: Administrador, Operador e Cliente — cada perfil vê apenas o que precisa, com portal exclusivo para o cliente final.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-2">
+        <div class="feature-icon"><i class="bi bi-phone-fill"></i></div>
+        <h3>App Mobile (Android)</h3>
+        <p>Acesse o sistema pelo celular com o app nativo Android — consulte clientes, saldos e importações onde estiver, sem precisar abrir o computador.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     COMO FUNCIONA
+     ══════════════════════════════════════════════ -->
+<section class="section how-section" id="como-funciona">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="badge badge-green mb-3"><i class="bi bi-diagram-3"></i> Como Funciona</span>
+      <h2>Da importação ao pagamento em 4 passos</h2>
+      <p>O fluxo mensal inteiro automatizado — sem complicação.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step fade-in">
+        <div class="step-num">1</div>
+        <h3>Importe o arquivo</h3>
+        <p>Faça upload do XLSX ou XML da Cemig. O sistema detecta UCs, períodos e créditos automaticamente.</p>
+      </div>
+      <div class="step fade-in fade-in-delay-1">
+        <div class="step-num">2</div>
+        <h3>Revise os dados</h3>
+        <p>Confira quais UCs foram reconhecidas, os kWh transferidos e se há alguma unidade nova a cadastrar.</p>
+      </div>
+      <div class="step fade-in fade-in-delay-2">
+        <div class="step-num">3</div>
+        <h3>Gere as cobranças</h3>
+        <p>Com um clique, o sistema gera as cobranças de todos os clientes com base nos créditos reais recebidos.</p>
+      </div>
+      <div class="step fade-in fade-in-delay-3">
+        <div class="step-num">4</div>
+        <h3>Controle os pagamentos</h3>
+        <p>Registre recebimentos, marque pagamentos a investidores e acompanhe o fluxo de caixa em tempo real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     MÓDULO FINANCEIRO
+     ══════════════════════════════════════════════ -->
+<section class="section finance-section" id="financeiro">
+  <div class="container">
+    <div class="finance-grid">
+
+      <div>
+        <span class="badge badge-green mb-3 fade-in"><i class="bi bi-graph-up-arrow"></i> Módulo Financeiro</span>
+        <h2 class="fade-in fade-in-delay-1">Visão financeira completa do seu negócio de GD</h2>
+        <p class="text-muted fade-in fade-in-delay-2" style="margin: 14px 0 32px; font-size: 1.05rem;">
+          Saiba exatamente quanto você vai receber dos clientes, quanto deve pagar aos investidores e qual é o seu saldo real — mês a mês.
+        </p>
+
+        <div class="finance-features">
+          <div class="finance-item fade-in fade-in-delay-1">
+            <div class="finance-item-icon"><i class="bi bi-calculator"></i></div>
+            <div>
+              <h4>Cálculo de pagamento ao investidor</h4>
+              <p>Aplica automaticamente deduções de fio-B, comercialização, contribuição mínima, PIS/COFINS e ICMS conforme a tarifa B1 da usina.</p>
+            </div>
+          </div>
+          <div class="finance-item fade-in fade-in-delay-2">
+            <div class="finance-item-icon"><i class="bi bi-receipt"></i></div>
+            <div>
+              <h4>Cobranças com desconto negociado</h4>
+              <p>Cada UC pode ter um desconto fixo em R$/kWh configurado. As cobranças geradas refletem exatamente o que foi negociado com o cliente.</p>
+            </div>
+          </div>
+          <div class="finance-item fade-in fade-in-delay-3">
+            <div class="finance-item-icon"><i class="bi bi-bar-chart-steps"></i></div>
+            <div>
+              <h4>Fluxo de caixa mensal</h4>
+              <p>Tabela com entradas (cobranças), saídas (pagamentos a investidores) e saldo previsto vs. realizado para cada mês do ano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="finance-visual fade-in fade-in-delay-2">
+        <div class="fin-kpi-row">
+          <div class="fin-kpi">
+            <div class="fin-kpi-label">A Receber</div>
+            <div class="fin-kpi-val up">R$ 28.450</div>
+            <span class="fin-kpi-badge up">↑ 12% vs mês anterior</span>
+          </div>
+          <div class="fin-kpi">
+            <div class="fin-kpi-label">A Pagar Invest.</div>
+            <div class="fin-kpi-val down">R$ 12.100</div>
+            <span class="fin-kpi-badge down">↓ 3%</span>
+          </div>
+          <div class="fin-kpi">
+            <div class="fin-kpi-label">Saldo Pendente</div>
+            <div class="fin-kpi-val up">R$ 16.350</div>
+            <span class="fin-kpi-badge up">Positivo</span>
+          </div>
+          <div class="fin-kpi">
+            <div class="fin-kpi-label">Cobranças Atr.</div>
+            <div class="fin-kpi-val down">R$ 2.800</div>
+            <span class="fin-kpi-badge down">3 em atraso</span>
+          </div>
+        </div>
+
+        <div class="fin-table-header">
+          <span class="fin-table-title">Cobranças recentes</span>
+        </div>
+        <div class="fin-rows">
+          <div class="fin-row">
+            <span class="fin-row-name">Cliente A — UC 3015985029</span>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span class="fin-status-badge paid">Pago</span>
+              <span class="fin-row-val">R$ 847,20</span>
+            </div>
+          </div>
+          <div class="fin-row">
+            <span class="fin-row-name">Cliente B — UC 3015660475</span>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span class="fin-status-badge pending">Pendente</span>
+              <span class="fin-row-val">R$ 1.230,00</span>
+            </div>
+          </div>
+          <div class="fin-row">
+            <span class="fin-row-name">Cliente C — UC 3012441823</span>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span class="fin-status-badge paid">Pago</span>
+              <span class="fin-row-val">R$ 564,80</span>
+            </div>
+          </div>
+          <div class="fin-row">
+            <span class="fin-row-name">Cliente D — UC 3018773201</span>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span class="fin-status-badge pending">Pendente</span>
+              <span class="fin-row-val">R$ 993,40</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PLANOS
+     ══════════════════════════════════════════════ -->
+<section class="section plans-section" id="planos">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="badge badge-green mb-3"><i class="bi bi-layers"></i> Planos</span>
+      <h2>Escolha o plano ideal para sua gestora</h2>
+      <p>Sem fidelidade, sem surpresas. Entre em contato e receba uma proposta personalizada.</p>
+    </div>
+
+    <div class="plans-grid">
+
+      <!-- Starter -->
+      <div class="plan-card fade-in">
+        <div class="plan-name">Starter</div>
+        <div class="plan-desc">Para gestoras em crescimento com carteira de até 50 clientes.</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Até 50 clientes</li>
+          <li><i class="bi bi-check-circle-fill"></i> 2 usinas (plantas GD)</li>
+          <li><i class="bi bi-check-circle-fill"></i> Importação XLSX e XML Cemig</li>
+          <li><i class="bi bi-check-circle-fill"></i> Gestão de UCs</li>
+          <li><i class="bi bi-check-circle-fill"></i> Cobranças automáticas</li>
+          <li><i class="bi bi-check-circle-fill"></i> Painel financeiro básico</li>
+          <li><i class="bi bi-check-circle-fill"></i> 2 usuários</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> App mobile</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> Portal do cliente</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> Suporte prioritário</li>
+        </ul>
+        <a href="#contato" class="btn btn-outline-dark plan-cta">Falar com especialista</a>
+      </div>
+
+      <!-- Pro (featured) -->
+      <div class="plan-card featured fade-in fade-in-delay-1">
+        <div class="plan-badge">Mais popular</div>
+        <div class="plan-name text-green">Profissional</div>
+        <div class="plan-desc">Para gestoras consolidadas com múltiplas usinas e carteiras maiores.</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Até 200 clientes</li>
+          <li><i class="bi bi-check-circle-fill"></i> Usinas ilimitadas</li>
+          <li><i class="bi bi-check-circle-fill"></i> Importação XLSX e XML Cemig</li>
+          <li><i class="bi bi-check-circle-fill"></i> Gestão de UCs ilimitada</li>
+          <li><i class="bi bi-check-circle-fill"></i> Cobranças automáticas</li>
+          <li><i class="bi bi-check-circle-fill"></i> Painel financeiro completo</li>
+          <li><i class="bi bi-check-circle-fill"></i> 5 usuários</li>
+          <li><i class="bi bi-check-circle-fill"></i> App mobile Android</li>
+          <li><i class="bi bi-check-circle-fill"></i> Portal do cliente</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> Suporte prioritário</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary plan-cta">Falar com especialista</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="plan-card fade-in fade-in-delay-2">
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-desc">Para grandes operações com múltiplas distribuidoras e equipes.</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Clientes ilimitados</li>
+          <li><i class="bi bi-check-circle-fill"></i> Usinas ilimitadas</li>
+          <li><i class="bi bi-check-circle-fill"></i> Importação XLSX e XML</li>
+          <li><i class="bi bi-check-circle-fill"></i> Gestão de UCs ilimitada</li>
+          <li><i class="bi bi-check-circle-fill"></i> Cobranças automáticas</li>
+          <li><i class="bi bi-check-circle-fill"></i> Painel financeiro completo</li>
+          <li><i class="bi bi-check-circle-fill"></i> Usuários ilimitados</li>
+          <li><i class="bi bi-check-circle-fill"></i> App mobile Android</li>
+          <li><i class="bi bi-check-circle-fill"></i> Portal do cliente</li>
+          <li><i class="bi bi-check-circle-fill"></i> Suporte prioritário 24/7</li>
+        </ul>
+        <a href="#contato" class="btn btn-outline-dark plan-cta">Falar com especialista</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     DEPOIMENTOS
+     ══════════════════════════════════════════════ -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="badge badge-green mb-3"><i class="bi bi-chat-quote"></i> Depoimentos</span>
+      <h2>Quem usa, aprova</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        </div>
+        <p class="testimonial-text">
+          "Antes do GridCred, o fechamento mensal levava 3 dias. Hoje fazemos em menos de 2 horas. A importação automática dos arquivos da Cemig mudou completamente nosso processo."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#27a24a">M</div>
+          <div>
+            <div class="testimonial-name">Marcelo A.</div>
+            <div class="testimonial-role">Diretor · Gestora Solar MG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in fade-in-delay-1">
+        <div class="testimonial-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        </div>
+        <p class="testimonial-text">
+          "O controle de pagamentos aos investidores era nosso maior gargalo. O GridCred calcula tudo automaticamente — fio-B, comercialização, PIS/COFINS — em segundos."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#0d3b7a">R</div>
+          <div>
+            <div class="testimonial-name">Renata C.</div>
+            <div class="testimonial-role">Gestora Financeira · SolarGD Ltda</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in fade-in-delay-2">
+        <div class="testimonial-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+        </div>
+        <p class="testimonial-text">
+          "Escalamos de 30 para 120 clientes sem precisar contratar mais ninguém. O sistema faz o trabalho pesado. O portal do cliente também reduziu muito as dúvidas no WhatsApp."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#7c3aed">T</div>
+          <div>
+            <div class="testimonial-name">Thiago B.</div>
+            <div class="testimonial-role">Sócio-fundador · Energia GD BH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     CTA FINAL + FORMULÁRIO
+     ══════════════════════════════════════════════ -->
+<section class="cta-section" id="contato">
+  <div class="container">
+    <div class="cta-inner fade-in">
+      <span class="badge badge-green mb-4"><i class="bi bi-calendar2-check"></i> Demonstração gratuita</span>
+      <h2>Pronto para automatizar sua gestora de GD?</h2>
+      <p>Agende uma demo de 30 minutos e veja como o GridCred funciona com os dados reais da sua operação.</p>
+
+      <div class="cta-actions">
+        <a href="https://wa.me/5531999999999?text=Olá!%20Quero%20conhecer%20o%20GridCred" target="_blank" class="btn btn-primary btn-lg">
+          <i class="bi bi-whatsapp"></i>
+          Falar no WhatsApp
+        </a>
+        <a href="mailto:contato@gridcred.com.br" class="btn btn-outline btn-lg">
+          <i class="bi bi-envelope"></i>
+          Enviar e-mail
+        </a>
+      </div>
+
+      <p class="cta-note">Sem compromisso · Demonstração 100% gratuita · Resposta em até 2h úteis</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          GridCred
+        </div>
+        <p>Sistema especializado em gestão de créditos de geração distribuída. Do arquivo da Cemig ao fluxo de caixa — tudo em uma plataforma.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Produto</h4>
+        <ul>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#financeiro">Módulo Financeiro</a></li>
+          <li><a href="#planos">Planos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contato</h4>
+        <p><i class="bi bi-whatsapp"></i> (31) 9 9999-9999</p>
+        <p><i class="bi bi-envelope"></i> contato@gridcred.com.br</p>
+        <p><i class="bi bi-geo-alt"></i> Belo Horizonte, MG</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 GridCred. Todos os direitos reservados.</p>
+      <p>Feito com <span style="color:#27a24a">♥</span> para gestoras de GD em Minas Gerais</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
