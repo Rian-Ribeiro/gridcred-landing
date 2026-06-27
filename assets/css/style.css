@@ -175,11 +175,11 @@ h3 { font-size: 1.25rem; }
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--navy);
-  letter-spacing: -.5px;
+}
+
+.navbar-logo-img {
+  height: 40px;
+  width: auto;
 }
 
 .navbar-logo .logo-icon {
@@ -1022,16 +1022,10 @@ h3 { font-size: 1.25rem; }
   font-weight: 800;
   color: var(--white);
 }
-.footer-logo .logo-icon {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, var(--green), var(--green-dark));
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: .95rem;
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .footer-col h4 {
